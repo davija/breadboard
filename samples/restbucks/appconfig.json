@@ -1,26 +1,31 @@
 {
-    "port": 3000,
-    "defaults": {
-        "logic": {
-            "get": "commands/logic-read.js",
-            "post": "commands/logic-create.js",
-            "put": "commands/logic-update.js",
-            "delete": "commands/logic-delete.js"
-        },
-        "filter": "commands/filter-include.js"
+  "port": 3000,
+  "defaults": {
+    "logic": {
+      "get": "commands/logic-read.js",
+      "post": "commands/logic-create.js",
+      "put": "commands/logic-update.js",
+      "delete": "commands/logic-delete.js"
     },
-    "dataProvider": "./providers/filedb",
-    "filedb": {
-        "path": "/tmp/breadboard-data/restbucks"
-    },
-    "mongodb": {
-        "connect": "mongodb://test:mongotest@paulo.mongohq.com:10045/dysxI4lRS8s1qBCj5pzDUw"
-    },
-    "client": {
-        "path": "/client/native"
-    },
-    "app": {
-        "name": "restbucks",
-        "path": "./samples/restbucks"
-    }
+    "filter": "commands/filter-include.js"
+  },
+  "dataProvider": "./providers/filedb",
+  "filedb": {
+    "path": "/tmp/breadboard-data/restbucks"
+  },
+  "mongodb": {
+    "connect": "mongodb://test:mongotest@paulo.mongohq.com:10045/dysxI4lRS8s1qBCj5pzDUw"
+  },
+  "mongoVault": {
+    "hostname": "127.0.0.1",
+    "port": "8200",
+    "tokenFile": "<path-to-vault-token-file>/mongo.token"
+  },
+  "client": {
+    "path": "/client/native"
+  },
+  "app": {
+    "name": "restbucks",
+    "path": "./samples/restbucks"
+  }
 }
